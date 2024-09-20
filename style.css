@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #EFEEF3;
+  font-family: "Kodchasan", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  padding: 0 10px;
+}
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    height: 20vh;
+  }
+}
+@media (min-width: 481px) {
+  header img {
+    width: 10vw;
+  }
+}
+header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  width: 70vw;
+}
+@media (max-width: 480px) {
+  header ul {
+    flex-direction: column;
+    width: 100vw;
+    height: 13vh;
+  }
+}
+
+main .img-banner {
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  main .img-banner {
+    display: none;
+  }
+}
+
+.glycolic-gloss-sec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 20px 0;
+}
+.glycolic-gloss-sec div {
+  width: 40vw;
+}
+.glycolic-gloss-sec div h1 {
+  margin: 20px 0;
+}
+@media (max-width: 480px) {
+  .glycolic-gloss-sec {
+    flex-direction: column;
+  }
+  .glycolic-gloss-sec img {
+    width: 90vw;
+  }
+  .glycolic-gloss-sec div {
+    width: 90vw;
+    font-size: 1.15em;
+  }
+}
+
+.products-sec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 20px 0;
+}
+.products-sec .text {
+  width: 40vw;
+  text-align: start;
+}
+.products-sec div {
+  width: 40vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.products-sec div img {
+  height: 15vh;
+  width: auto;
+}
+@media (max-width: 480px) {
+  .products-sec {
+    flex-direction: column;
+    /* img {
+        border: solid;
+        width: 90vw;
+    } */
+  }
+  .products-sec .text {
+    width: 90vw;
+    text-align: center;
+    font-size: 1.25em;
+  }
+  .products-sec div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .products-sec div img {
+    height: 20vh;
+    width: auto;
+    margin: 30px;
+  }
+}
+
+.text {
+  text-align: center;
+  font-weight: 400;
+}/*# sourceMappingURL=style.css.map */

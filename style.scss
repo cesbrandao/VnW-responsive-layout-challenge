@@ -1,0 +1,139 @@
+$font-body: "Kodchasan", sans-serif;
+
+@mixin flexbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin section-base {
+    @include flexbox();
+    justify-content: space-evenly;
+    margin: 20px 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EFEEF3;
+    font-family: $font-body;
+}
+
+header {
+    //border: solid gold;
+    @include flexbox();
+    height: 10vh;
+    padding: 0 10px;
+    @media(max-width: 480px){
+        flex-direction: column;
+        //border: solid gold;
+        height: 20vh;
+    }
+    img {
+        @media(min-width: 481px){
+            width: 10vw;
+        }
+    }
+    ul {
+        //border: solid red;
+        @include flexbox();
+        list-style: none;
+        width: 70vw;
+        @media(max-width: 480px){
+            flex-direction: column;
+            //border: solid red;
+            width: 100vw;
+            height: 13vh;
+        }
+    }
+}
+
+main {
+    .img-banner {
+        max-width: 100%;
+        @media(max-width: 480px){
+            display: none;
+        }
+    }
+}
+
+.glycolic-gloss-sec {
+    @include section-base();
+    div {
+        //border: solid red;
+        width: 40vw;
+        h1 {
+            margin: 20px 0;
+        }
+    }
+    @media(max-width: 480px) {
+        flex-direction: column;
+        //border: solid gold;
+        img {
+            //border: solid;
+            width: 90vw;
+        }
+        div {
+            //border: solid red;
+            width: 90vw;
+            font-size: 1.15em;
+        }
+    }
+}
+
+.products-sec {
+    @include section-base();
+    .text {
+        //border: solid red;
+        width: 40vw;
+        text-align: start;
+    }
+    div {
+        //border: solid red;
+        width: 40vw;
+        @include flexbox();
+        flex-wrap: wrap;
+        img {
+            //width: 10%;
+            height: 15vh;
+            width: auto;
+        }
+    }
+    @media(max-width: 480px) {
+        flex-direction: column;
+        //border: solid gold;
+        .text {
+            //border: solid red;
+            width: 90vw;
+            text-align: center;
+            font-size: 1.25em;
+        }
+        /* img {
+            border: solid;
+            width: 90vw;
+        } */
+        div {
+            @include flexbox();
+            //border: solid;
+            width: 90vw;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            img {
+                height: 20vh;
+                width: auto;
+                //border: solid cyan;
+                margin: 30px;
+            }
+        }
+    }
+}
+
+.text {
+    text-align: center;
+    font-weight: 400;
+}
+
